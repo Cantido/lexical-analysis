@@ -27,14 +27,14 @@ Otherwise, they should be recognized as identifiers.
 
 ###Grammar
 
-    EXPR → *intconst* | *ident* | **(** PAREN_EXPR **)**
+    EXPR → intconst | ident | ( PAREN_EXPR )
     PAREN_EXPR →  ARITH_EXPR | IF_EXPR | LET_EXPR | DEFUN_EXPR | EXPR_LIST
     ARITH_EXPR →  OP  EXPR  EXPR
-    IF_EXPR →  **if**  EXPR  EXPR  EXPR
-    LET_EXPR →  **let (** ID_EXPR_LIST **)** EXPR
-    ID_EXPR_LIST →  λ | ID_EXPR_LIST **(** *ident* EXPR **)**
-    DEFUN_EXPR →  **defun (**  ID_LIST **)** EXPR
-    ID_LIST →  λ | ID_LIST *ident*
+    IF_EXPR →  if  EXPR  EXPR  EXPR
+    LET_EXPR →  let ( ID_EXPR_LIST ) EXPR
+    ID_EXPR_LIST →  λ | ID_EXPR_LIST ( ident EXPR )
+    DEFUN_EXPR →  defun (  ID_LIST ) EXPR
+    ID_LIST →  λ | ID_LIST ident
     EXPR_LIST →  EXPR EXPR_LIST | EXPR
     OP →  + | - | * | /
 
