@@ -1,11 +1,11 @@
 all: flex bison
-	g++ bisonfile.tab.c -o parser
+	g++ example.tab.c -o parser
 
-bison: bisonfile.y
-	bison bisonfile.y
+bison: example.y
+	bison example.y
 
-flex: flexfile.l
-	flex flexfile.l
+flex: example.l
+	flex example.l
 
 clean:
-	rm -rf *.o *.exe *.out lex.yy.c bisonfile.tab.c
+	rm -rf *.o *.exe *.out lex.yy.c example.tab.c
