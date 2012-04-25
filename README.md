@@ -1,4 +1,4 @@
-### CS 220 – Theory of Computation – Spring 2012
+ï»¿### CS 220 â€“ Theory of Computation â€“ Spring 2012
 
 Modify the  example.l and  example.y files  which were  discussed in lecture
 (and are posted on the Blackboard website) to  instead recognize the tokens and
@@ -11,7 +11,7 @@ letter or underscore, followed by any number of letters, digits, and/or
 underscores).
 
 Token *intconst* is the same as a positive or negative (or unsigned) integer
-constant that would be valid in C++. Don’t worry about a size limit on integer
+constant that would be valid in C++. Donâ€™t worry about a size limit on integer
 constants.
 
 The only *keyword* tokens are the following: `let`, `if`, `defun`
@@ -32,7 +32,7 @@ Otherwise, they should be recognized as identifiers.
     ARITH_EXPR ->  OP EXPR EXPR
     IF_EXPR ->  if EXPR  EXPR  EXPR 
     LET_EXPR ->  let ( ID_EXPR_LIST ) EXPR
-    ID_EXPR_LIST -> ->  | ID_EXPR_LIST ( ident  EXPR )
+    ID_EXPR_LIST -> Î» | ID_EXPR_LIST ( ident  EXPR )
     DEFUN_EXPR ->  defun (  ID_LIST ) EXPR
     ID_LIST -> ->  | ID_LIST ident
     EXPR_LIST ->  EXPR  EXPR_LIST  |  EXPR
