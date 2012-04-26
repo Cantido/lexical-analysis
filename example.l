@@ -1,33 +1,10 @@
-%{
-/* Definitions of constants, variables, & function prototypes go here */
-
-#define T_LET       1
-#define T_IF        2
-#define T_DEFUN     3
-#define T_PLUS      4
-#define T_MINUS     5
-#define T_MULTIPLY  6
-#define T_DIVIDE    7
-#define T_LPAREN    8
-#define T_RPAREN    9
-#define T_INTCONST  10
-#define T_IDENT     11
-#define T_UNKNOWN   12
-
-//int numLines = 0;
-
-void printTokenInfo(const char* tokenType, char* lexeme);
-
-%}
-
-
 WSPACE              [ \t\r]+
 NEWLINE             \n
 
 DIGIT               [0-9]
 LETTER              [a-zA-Z]
 
-IDENT               (_|{LETTER})({LETTER}|{DIGIT}|_)+
+IDENT               (_|{LETTER})({LETTER}|{DIGIT}|_)*
 INTCONST            ("+"|"-")?{DIGIT}+
 
 %%
@@ -86,18 +63,3 @@ INTCONST            ("+"|"-")?{DIGIT}+
             }
 
 %%
-
-
-void printTokenInfo(const char* tokenType, char* lexeme)
-{
-  printf("TOKEN: %s  LEXEME: %s\n", tokenType, lexeme);
-}
-
-//int yywrap(void) { return 1; }
-
-/*int main(void)
-{
-  while(yylex());
-  printf("Processed %d lines\n", numLines);
-  return 0;
-}*/
