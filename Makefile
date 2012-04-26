@@ -1,6 +1,9 @@
 all: flex bison
 	g++ example.tab.c -o parser
 
+flexparse: flex
+	g++ lex.yy.c -o flexparse
+
 bison: example.y
 	bison example.y
 
