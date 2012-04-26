@@ -75,7 +75,7 @@ N_LET_EXPR      : T_LET T_LPAREN N_ID_EXPR_LIST T_RPAREN N_EXPR
                     {
                         printRule("LET_EXPR", "let ( ID_EXPR_LIST ) EXPR");
                     };
-N_ID_EXPR_LIST  : /* lambda (lambda)*/
+N_ID_EXPR_LIST  : /* lambda */
                     {
                         printRule("ID_EXPR_LIST", "lambda");
                     }
@@ -87,7 +87,7 @@ N_DEFUN_EXPR    : T_DEFUN T_LPAREN N_ID_LIST T_RPAREN N_EXPR
                     {
                         printRule("DEFUN_EXPR", "defun ( ID_LIST ) EXPR");
                     };
-N_ID_LIST       : /* lambda (lambda)*/
+N_ID_LIST       : /* lambda */
                     {
                         printRule("ID_LIST", "lambda");
                     }
